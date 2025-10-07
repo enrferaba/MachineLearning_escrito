@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\input{../anexos/plantillas.tex}
+\title{Enunciado 04 -- Funciones helper de imágenes}
+\author{Dossier B1}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{Objetivo}
+Documentar las funciones auxiliares empleadas para cargar, guardar, cuantizar y visualizar imágenes dentro del proyecto, enfatizando el flujo de datos y la gestión de rutas.
+
+\section{Funciones clave}
+\begin{description}[leftmargin=!,labelwidth=5cm]
+  \item[\texttt{load\_ppm(path)}] Describir parámetros de entrada, estructura de retorno (matriz RGB) y validaciones realizadas.
+  \item[\texttt{save\_ppm(path, image)}] Explicar el formato de salida, conversión de tipos y manejo de carpetas destino.
+  \item[\texttt{quantize\_image(image, palette)}] Detallar el algoritmo de cuantización (p.ej. asignación al centroide más cercano) y complejidad.
+  \item[\texttt{show\_comparison(original, processed)}] Indicar cómo se generan figuras lado a lado y cómo se integran en los notebooks.
+\end{description}
+
+\section{Diagramas de flujo}
+Insertar diagramas exportados desde los notebooks o creados con herramientas externas para ilustrar:
+\begin{itemize}
+  \item Ciclo de carga\,$\rightarrow$\,procesamiento\,$\rightarrow$\,guardado.
+  \item Integración con los helpers de \texttt{class\_helpers.py}.
+\end{itemize}
+Las imágenes deben guardarse en `assets/` y referenciarse mediante `\includegraphics`.
+
+\section{Tratamiento de matrices de píxeles}
+Explicar cómo se manipulan las matrices (dimensiones, canales, normalización) y cómo se manejan posibles valores fuera de rango. Incluir ejemplos numéricos.
+
+\section{Gestión de rutas y reproducibilidad}
+Detallar cómo se construyen rutas relativas a partir de la raíz del proyecto y cómo los helpers aseguran la existencia de directorios (usar \texttt{ensure\_practice\_paths}).
+
+\section{Conclusiones}
+Resumir buenas prácticas y validaciones implementadas para evitar corrupción de archivos o errores de lectura.
+
+\section*{Checklist}
+\ChecklistBase
+
+\end{document}
