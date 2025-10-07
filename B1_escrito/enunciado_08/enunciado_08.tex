@@ -1,0 +1,37 @@
+\documentclass[12pt]{article}
+\input{plantillas.tex}
+\title{Enunciado 08 -- Varianza explicada por PCA}
+\author{Dossier B1}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{Objetivo}
+Cuantificar y analizar la varianza explicada acumulada por los componentes principales del conjunto de rostros, justificando cuántos componentes son necesarios para distintos umbrales.
+
+\section{Metodología}
+\begin{pasoapaso}
+  \item Derivar la fórmula de varianza explicada individual y acumulada a partir de los autovalores.
+  \item Construir una tabla con la varianza acumulada y marcar los umbrales de 80\%, 90\%, 95\% y 99\%.
+  \item Representar gráficamente (en `assets/`) la curva de varianza acumulada y explicar su interpretación.
+\end{pasoapaso}
+
+\section{Resultados}
+\TablaComparativa{Varianza explicada acumulada}{tab:varianza}{%
+  \begin{tabular}{lcc}
+    \toprule
+    Componentes & Varianza individual (\%) & Varianza acumulada (\%) \\
+    \midrule
+    % Completar con datos reales
+    \bottomrule
+  \end{tabular}
+}
+Discutir el número de componentes recomendados para cada umbral y las implicaciones en tiempo de cómputo y calidad de reconstrucción.
+
+\section{Conclusiones}
+Resumir los criterios de selección de componentes y cómo se relacionan con el Enunciado~09.
+
+\section*{Checklist}
+\ChecklistBase
+
+\end{document}

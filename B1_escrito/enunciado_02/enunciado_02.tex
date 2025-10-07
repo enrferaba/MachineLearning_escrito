@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\input{plantillas.tex}
+\title{Enunciado 02 -- Zoo y clustering jerárquico}
+\author{Dossier B1}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{Objetivo}
+Analizar el dataset \emph{zoo} mediante técnicas de clustering jerárquico, comparando diferentes criterios de enlace y distancias para interpretar la estructura taxonómica implícita.
+
+\section{Datos y preprocesamiento}
+Reutilizar la preparación del Enunciado~01 (escalado, selección de variables), explicitando cualquier diferencia necesaria para la distancia jerárquica.
+
+\section{Metodología}
+\begin{pasoapaso}
+  \item Justificar la métrica de distancia elegida (Euclídea, Manhattan, etc.) y mostrar un ejemplo manual del cálculo entre dos animales, incluyendo una tabla detallada.
+  \item Generar dendrogramas para los enlaces \emph{single}, \emph{complete} y \emph{average}; enlazar cada figura exportada en `assets/` indicando cómo reproducirla.
+  \item Comparar cortes horizontales específicos y mostrar cómo cambian las asignaciones de clústeres.
+\end{pasoapaso}
+
+\section{Resultados}
+\TablaComparativa{Comparativa de enlaces}{tab:enlaces}{%
+  \begin{tabular}{lccc}
+    \toprule
+    Enlace & Altura óptima & Número de clústeres & Observaciones \\
+    \midrule
+    % Rellenar con resultados reales
+    \bottomrule
+  \end{tabular}
+}
+Incluir discusión textual sobre las diferencias entre enlaces y la coherencia con la taxonomía real.
+
+\section{Conclusiones}
+Sintetizar qué configuración ofrece la mejor separación y cómo se relaciona con las categorías de \texttt{type}.
+
+\section*{Checklist}
+\ChecklistBase
+
+\end{document}

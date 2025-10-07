@@ -1,0 +1,37 @@
+\documentclass[12pt]{article}
+\input{plantillas.tex}
+\title{Enunciado 05 -- Reducción de color en imágenes}
+\author{Dossier B1}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{Objetivo}
+Describir el proceso de cuantización de color (p.ej. K-Means sobre el espacio RGB) aplicado a las imágenes del conjunto `img/ppm/`, destacando la selección de centroides y el efecto visual/numerico de la reducción.
+
+\section{Metodología}
+\begin{pasoapaso}
+  \item Presentar el algoritmo elegido (K-Means u otra técnica), incluyendo la inicialización de centroides y criterios de convergencia.
+  \item Cuantizar paso a paso una imagen pequeña de ejemplo (matriz $4\times4$ o similar) mostrando las asignaciones manuales.
+  \item Aplicar el procedimiento a las imágenes reales y guardar las versiones cuantizadas en `assets/`.
+\end{pasoapaso}
+
+\section{Resultados}
+\TablaComparativa{Conteo de colores tras cuantización}{tab:colores}{%
+  \begin{tabular}{lccc}
+    \toprule
+    Imagen & Colores originales & Colores tras cuantización & Error MSE \\
+    \midrule
+    % Completar con datos reales
+    \bottomrule
+  \end{tabular}
+}
+Incluir figuras comparativas (antes/después) y discutir la calidad percibida.
+
+\section{Conclusiones}
+Analizar el compromiso entre reducción de colores y fidelidad visual, así como recomendaciones para seleccionar $k$.
+
+\section*{Checklist}
+\ChecklistBase
+
+\end{document}

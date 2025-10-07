@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\input{plantillas.tex}
+\title{Enunciado 06 -- Estudio del tamaño de archivos de imagen}
+\author{Dossier B1}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{Objetivo}
+Analizar cómo varían los tamaños de archivo al guardar las imágenes en distintos formatos (PPM, PNG, JPEG, etc.) y evaluar el compromiso entre compresión y calidad.
+
+\section{Procedimiento}
+\begin{pasoapaso}
+  \item Listar los formatos evaluados y las herramientas empleadas para convertir/medir el tamaño (scripts de Python o utilidades del sistema).
+  \item Registrar tamaños antes y después de la cuantización de colores (si aplica), indicando rutas y comandos utilizados.
+  \item Documentar cualquier ajuste de calidad (nivel de compresión JPEG, profundidad de bits, etc.).
+\end{pasoapaso}
+
+\section{Resultados}
+\TablaComparativa{Tamaños por formato}{tab:tamanos}{%
+  \begin{tabular}{lccc}
+    \toprule
+    Imagen & Formato & Tamaño (kB) & Ahorro porcentual \\
+    \midrule
+    % Completar con datos reales
+    \bottomrule
+  \end{tabular}
+}
+Acompañar con figuras de comparación visual para ilustrar el impacto en calidad.
+
+\section{Discusión}
+Analizar las tendencias observadas, destacar el mejor formato en términos de relación compresión/calidad e incluir cálculos percentuales detallados.
+
+\section{Conclusiones}
+Recomendar formatos y configuraciones para distintos escenarios (almacenamiento vs. visualización).
+
+\section*{Checklist}
+\ChecklistBase
+
+\end{document}

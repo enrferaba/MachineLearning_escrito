@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\input{plantillas.tex}
+\title{Enunciado 09 -- Clasificación con y sin PCA}
+\author{Dossier B1}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{Objetivo}
+Comparar el rendimiento de distintos clasificadores sobre el conjunto de rostros (u otro dataset correspondiente) con y sin reducción de dimensionalidad mediante PCA.
+
+\section{Diseño experimental}
+\begin{pasoapaso}
+  \item Describir el conjunto de datos, partición de entrenamiento/prueba y tratamiento de desbalanceos.
+  \item Especificar los modelos evaluados (p.ej. SVM, k-NN, Regresión Logística) y sus hiperparámetros.
+  \item Definir las métricas de evaluación (accuracy, F1, matrices de confusión) y la metodología de validación (hold-out, cross-validation).
+\end{pasoapaso}
+
+\section{Resultados}
+\TablaComparativa{Rendimiento con y sin PCA}{tab:clasificacion}{%
+  \begin{tabular}{lcccc}
+    \toprule
+    Modelo & Configuración & Accuracy & F1 macro & Observaciones \\
+    \midrule
+    % Completar con datos reales
+    \bottomrule
+  \end{tabular}
+}
+Incluir matrices de confusión y discutir cambios en precisión/recobrado.
+
+\section{Discusión}
+Analizar por qué PCA puede mejorar o empeorar el rendimiento: efectos en ruido, sobreajuste y tiempo de cómputo. Incluir reflexión sobre balanceo de clases y estrategias para mitigarlo.
+
+\section{Conclusiones}
+Sintetizar las lecciones aprendidas y recomendaciones para aplicar PCA antes de la clasificación.
+
+\section*{Checklist}
+\ChecklistBase
+
+\end{document}

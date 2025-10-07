@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+\input{plantillas.tex}
+\title{Enunciado 07 -- PCA sobre rostros}
+\author{Dossier B1}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{Objetivo}
+Explicar el proceso de reducción de dimensionalidad mediante PCA sobre el conjunto `faces.mat`, documentando la construcción de la matriz de covarianzas, el cálculo de autovalores/autovectores y la reconstrucción de rostros.
+
+\section{Preparación de datos}
+Describir cómo se cargan las imágenes desde `faces.mat`, su vectorización y la normalización previa.
+
+\section{Cálculo de PCA}
+\begin{pasoapaso}
+  \item Derivar la fórmula de la matriz de covarianzas y especificar su dimensionalidad.
+  \item Resumir el cálculo de autovalores y autovectores (mostrar primeros valores y su interpretación).
+  \item Mostrar cómo se selecciona el número de componentes principales y cómo se proyectan los rostros.
+\end{pasoapaso}
+
+\section{Reconstrucciones}
+Incluir figuras (antes/después) de al menos dos rostros, señalando el número de componentes usados. Explicar cómo se realiza la reconstrucción y cuantificar el error (RMSE o PSNR).
+
+\section{Discusión}
+Analizar qué características capturan los primeros componentes y cómo influyen en la variabilidad entre rostros.
+
+\section{Conclusiones}
+Resumir los beneficios de PCA en compresión y reconocimiento facial.
+
+\section*{Checklist}
+\ChecklistBase
+
+\end{document}
