@@ -1,0 +1,50 @@
+% Plantillas y macros compartidas para los informes B1
+\ProvidesFile{plantillas.tex}[2024/04/20 Plantillas compartidas B1]
+
+% Paquetes base recomendados para todos los enunciados
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{geometry}
+\geometry{a4paper, margin=2.5cm}
+
+% Configuración de siunitx para porcentajes y decimales
+\sisetup{round-mode=places, round-precision=3, detect-all}
+
+% Checklist reutilizable
+\newlist{checklist}{itemize}{1}
+\setlist[checklist]{label=$\square$, left=1.5em, itemsep=0.2em}
+
+\newcommand{\ChecklistBase}{%
+  \begin{checklist}
+    \item Se documenta el preprocesamiento completo.
+    \item Se muestran los cálculos manuales clave.
+    \item Se comparan resultados manuales con los obtenidos por software.
+    \item Se interpretan los resultados en el contexto del problema.
+  \end{checklist}%
+}
+
+% Entorno para resaltar procedimientos paso a paso
+\newenvironment{pasoapaso}{%
+  \begin{enumerate}[label=Paso~\arabic*:, leftmargin=*, itemsep=0.4em]
+}{%
+  \end{enumerate}
+}
+
+% Formato estándar de tablas comparativas
+\newcommand{\TablaComparativa}[3]{%
+  \begin{table}[H]
+    \centering
+    \caption{#1}
+    \label{#2}
+    #3
+  \end{table}
+}
+
+% Nota: cada documento debe `\input{../anexos/plantillas.tex}` tras `\documentclass`.

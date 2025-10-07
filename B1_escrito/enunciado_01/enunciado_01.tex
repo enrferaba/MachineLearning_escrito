@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+\input{../anexos/plantillas.tex}
+\title{Enunciado 01 -- Zoo y K-Means}
+\author{Dossier B1}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{Objetivo}
+Documentar el proceso completo de agrupamiento K-Means aplicado al conjunto \emph{zoo}, comparando configuraciones con y sin la variable \texttt{type} y justificando la elección del número de clústeres.
+
+\section{Datos y preprocesamiento}
+\begin{pasoapaso}
+  \item Describir los atributos del dataset, destacando variables binarias y numéricas (por ejemplo, \texttt{legs}).
+  \item Explicar la imputación/limpieza necesaria y la justificación del escalado (normalización o estandarización) de \texttt{legs} y del resto de variables.
+  \item Indicar cómo se separó el conjunto para las versiones con y sin \texttt{type}.
+\end{pasoapaso}
+
+\section{Modelado}
+\begin{pasoapaso}
+  \item Mostrar las iteraciones iniciales de K-Means calculando manualmente distancias Euclídeas para un subconjunto representativo (incluir tabla de distancias y asignaciones).
+  \item Registrar las ejecuciones del algoritmo para varios valores de $k$ (inercia, silhouette, ARI con respecto a \texttt{type}).
+  \item Incluir proyecciones 2D mediante PCA con y sin \texttt{type}, referenciando figuras en `assets/`.
+\end{pasoapaso}
+
+\section{Evaluación e interpretación}
+\TablaComparativa{Métricas por número de clústeres}{tab:metrics}{%
+  \begin{tabular}{lccc}
+    \toprule
+    $k$ & Inercia & Coeficiente silhouette & ARI \\
+    \midrule
+    % Completar con valores reales
+    \bottomrule
+  \end{tabular}
+}
+Discutir la elección final de $k$ y comparar los resultados obtenidos con y sin la variable \texttt{type}, enfatizando las diferencias en la separación de especies.
+
+\section{Conclusiones}
+Resumir los hallazgos principales, destacando la utilidad del escalado, el valor óptimo de $k$ y la interpretación biológica de los clústeres.
+
+\section*{Checklist}
+\ChecklistBase
+
+\end{document}

@@ -1,0 +1,37 @@
+\documentclass[12pt]{article}
+\input{../anexos/plantillas.tex}
+\title{Enunciado 03 -- DBSCAN sobre 12 puntos}
+\author{Dossier B1}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{Objetivo}
+Resolver manualmente el proceso de agrupamiento con DBSCAN para un conjunto de doce puntos, identificando núcleo, frontera y ruido en función de $\varepsilon$ y `minPts`.
+
+\section{Datos de partida}
+Describir la distribución de los 12 puntos (coordenadas o matriz de distancias), incluyendo una figura ilustrativa desde los notebooks.
+
+\section{Cálculo de distancias}
+Presentar la tabla completa de distancias entre puntos.
+\TablaComparativa{Distancias Euclídeas}{tab:distancias}{%
+  % Incluir tabular con distancias calculadas manualmente
+}
+
+\section{Aplicación de DBSCAN}
+\begin{pasoapaso}
+  \item Definir explícitamente los parámetros $\varepsilon$ y `minPts`.
+  \item Marcar vecinos directos y puntos densamente alcanzables, justificando cada clasificación.
+  \item Construir los clústeres paso a paso hasta etiquetar todos los puntos o catalogarlos como ruido.
+\end{pasoapaso}
+
+\section{Resultados y discusión}
+Incluir tabla resumen con los clústeres finales y la categoría de cada punto. Explicar por qué ciertos puntos se consideran ruido y cómo cambiaría la asignación variando $\varepsilon$.
+
+\section{Conclusiones}
+Destacar la utilidad de DBSCAN frente a métodos de partición cuando hay ruido o densidades diferentes.
+
+\section*{Checklist}
+\ChecklistBase
+
+\end{document}
