@@ -12,7 +12,7 @@ B1_escrito/
       enunciado_##.tex     ← desarrollo completo en LaTeX
       (enunciado_##.pdf)   ← PDF compilado desde el .tex (generar tras editar)
   anexos/
-      plantillas.tex       ← macros y tablas de apoyo compartidas
+      plantillas.tex       ← macros y tablas de apoyo compartidas (ver nota)
       (archivos auxiliares)
 ```
 
@@ -75,6 +75,23 @@ Incluye en cada `.tex` una checklist en LaTeX similar a:
 \end{itemize}
 ```
 Esta lista permite verificar que cada ejercicio mantiene coherencia con el resto del dossier.
+
+## Compilar los `.tex`
+1. Abrir Visual Studio Code (o editor equivalente) dentro de `B1_escrito/`.
+2. Instalar la extensión LaTeX Workshop y una distribución LaTeX (MiKTeX, TeXLive).
+3. Cada carpeta `enunciado_xx/` incluye una copia local de `plantillas.tex` para evitar errores de rutas al compilar desde VS Code. Edita siempre la versión maestra en `anexos/plantillas.tex`.
+4. Compilar cada documento con `Ctrl + Alt + B` verificando que el PDF correspondiente se genera sin errores.
+5. Si se añaden figuras a `assets/`, usar rutas relativas (`../assets/figura_xx.pdf`).
+
+> **Nota sobre `plantillas.tex`:** después de modificar la versión maestra, sincroniza las copias locales ejecutando `./tools/sync_plantillas.sh` desde la raíz del repositorio.
+
+## Sincronizar plantillas
+
+```bash
+./tools/sync_plantillas.sh
+```
+
+Este script copia `anexos/plantillas.tex` a cada subcarpeta `enunciado_xx/` para que LaTeX Workshop encuentre las macros sin necesidad de ajustar rutas manualmente.
 
 ## Próximos pasos
 1. Completar y revisar `plantillas.tex` con comandos compartidos (formato de tablas, macros para checklist, estilos de figuras).
